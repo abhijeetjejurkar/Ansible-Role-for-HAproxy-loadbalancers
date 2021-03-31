@@ -1,0 +1,6 @@
+---
+# vars file for loadbalancer
+
+software_name: haproxy
+port: 8080
+

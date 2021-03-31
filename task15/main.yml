@@ -1,0 +1,7 @@
+- hosts: webserver
+  roles:
+      - role: /root/task15/webserver
+
+- hosts: loadbalancer
+  roles: 
+      - role: /root/task15/loadbalancer

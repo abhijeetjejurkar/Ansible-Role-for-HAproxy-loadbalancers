@@ -1,0 +1,18 @@
+---
+# tasks file for myapache
+#
+#
+- name: "Installing {{ software_name }} Software"
+  package:
+     name: "{{ software_name }}"
+
+- name: "Copying HTML Pages"
+  copy:
+     src: "/root/task15/webserver/files/index.html"
+     dest: "/var/www/html/index.php"
+  notify: "Restart Services"
+
+- name: "Starting {{ software_name }} Service"
+  service:
+     name: "{{ software_name }}"
+     state: started
